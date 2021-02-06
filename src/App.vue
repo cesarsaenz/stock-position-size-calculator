@@ -1,32 +1,21 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<div class="max-w-2xl mx-auto text-center p-6">
+  <h1 class="text-gray-800 text-2xl font-light">Stock Position Size Calculator</h1>
+  <stock-position-size-calculator class="rounded-md shadow-xl" tickerPosition="1" />
+  <stock-position-size-calculator class="mt-4 rounded-md shadow-xl" tickerPosition="2" />
+</div>    
 </template>
 
+<script>
+import StockPositionSizeCalculator from '@/components/StockPositionSizeCalculator.vue'
+export default {
+  name:'App',
+  components: { StockPositionSizeCalculator }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+html {
+      @apply  border-t-4 border-indigo-600 bg-gray-50
+    } 
 </style>
